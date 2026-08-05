@@ -1,43 +1,75 @@
 # TA Catalog Theme
 
-Tema WordPress/WooCommerce para el catálogo de Técnicos Americanos.
+Tema clásico modular para WordPress y WooCommerce, diseñado para presentar catálogos técnicos con una experiencia clara, profesional y responsive.
 
-## Estado
+**Versión actual:** `0.6.0-alpha`
 
-Sprint 1 — Skeleton funcional, versión `0.1.0`.
+**Estado:** Sprint 2 – Product Experience
+
+**Licencia:** GPL-2.0-or-later
+
+## Características
+
+- Product Cards con imagen contenida, categoría, descripción corta, rating, precio, badges y acciones.
+- Shop Archive propio con hero, breadcrumb, ordenamiento y área de filtros.
+- Grid responsive de 3, 2 y 1 columnas.
+- Header con anuncio, logo, búsqueda de productos, cuenta, carrito y navegación móvil.
+- Footer modular con widgets y menú independiente.
+- Compatibilidad visual con producto, carrito, checkout y Mi cuenta de WooCommerce.
+- Galería WooCommerce con zoom, lightbox y slider.
+- CSS separado por responsabilidad y design tokens personalizables.
+- Accesibilidad básica: skip link, foco visible, etiquetas ARIA y reducción de movimiento.
+- Sin dependencias externas de JavaScript.
 
 ## Requisitos
 
-- WordPress 6.6 o superior.
+- WordPress 6.4 o superior.
 - PHP 7.4 o superior.
-- WooCommerce opcional; requerido para las funciones de tienda.
+- WooCommerce recomendado para las funciones de catálogo.
 
 ## Instalación
 
-1. En WordPress, ir a **Apariencia > Temas > Añadir nuevo > Subir tema**.
-2. Seleccionar `ta-catalog-theme-0.1.0.zip`.
-3. Instalar y activar.
-4. Asignar los menús en **Apariencia > Menús**.
-5. Configurar logo y botón de cabecera en **Apariencia > Personalizar**.
-6. Si se usa WooCommerce, verificar las páginas de tienda, carrito y checkout.
+1. Descargá el ZIP de la versión.
+2. En WordPress ingresá a **Apariencia → Temas → Añadir nuevo → Subir tema**.
+3. Seleccioná el ZIP, instalalo y activalo.
+4. Asigná el menú principal y el menú del pie desde **Apariencia → Menús**.
+5. Configurá el logo y el mensaje superior desde **Apariencia → Personalizar**.
+6. Para filtros, agregá widgets WooCommerce en **Filtros de tienda**.
 
 ## Arquitectura
 
-- `functions.php`: arranque y constantes.
-- `inc/`: configuración, assets, widgets, Customizer y WooCommerce.
-- `template-parts/`: componentes reutilizables.
-- `assets/`: estilos y JavaScript.
-- `theme.json`: tokens y estilos del editor.
-- `woocommerce.php`: wrapper de integración sin copiar plantillas internas del plugin.
+```text
+TA-Catalog-Theme/
+├── assets/
+│   ├── css/              # Tokens, base, layout, componentes y módulos WooCommerce
+│   └── js/               # Navegación y panel móvil de filtros
+├── inc/                  # Setup, assets, Customizer, helpers e integración WooCommerce
+├── woocommerce/          # Overrides mínimos del archivo y la tarjeta
+├── functions.php         # Bootstrap sin lógica de presentación
+├── header.php
+├── footer.php
+├── theme.json
+└── style.css             # Metadata oficial del tema
+```
 
-## Criterios de actualización
+La lógica se divide en módulos dentro de `inc/`; los templates se limitan al marcado y los estilos se cargan en orden desde `inc/enqueue.php`. Los overrides de WooCommerce se mantienen deliberadamente mínimos.
 
-- No editar plantillas dentro del plugin WooCommerce.
-- Priorizar hooks y filtros.
-- Incrementar `TA_CATALOG_VERSION` y la cabecera de `style.css` en cada release.
-- Revisar compatibilidad antes de cambiar el valor `Tested up to`.
+## Personalización rápida
 
-## Licencia
+Los colores, radios, sombras y ancho máximo viven en `assets/css/tokens.css`. El color de acento también puede cambiarse desde el Customizer sin editar archivos.
 
-GNU General Public License v2 o posterior.
+## Desarrollo
 
+Validación PHP:
+
+```bash
+find . -name '*.php' -not -path './vendor/*' -print0 | xargs -0 -n1 php -l
+```
+
+Generación del instalable desde el directorio padre:
+
+```bash
+zip -r TA-Catalog-Theme-v0.6.0-alpha.zip TA-Catalog-Theme -x 'TA-Catalog-Theme/.git/*' '*.zip'
+```
+
+Consultá [CHANGELOG.md](CHANGELOG.md) para cambios publicados y [ROADMAP.md](ROADMAP.md) para los próximos sprints.

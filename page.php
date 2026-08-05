@@ -2,22 +2,16 @@
 /**
  * Page template.
  *
- * @package TA_Catalog_Theme
+ * @package TACatalog
  */
-
 get_header();
 ?>
-<main id="primary" class="site-main">
-	<div class="ta-container content-narrow">
-		<?php while ( have_posts() ) : ?>
-			<?php the_post(); ?>
-			<?php get_template_part( 'template-parts/content', 'page' ); ?>
-			<?php if ( comments_open() || get_comments_number() ) : ?>
-				<?php comments_template(); ?>
-			<?php endif; ?>
-		<?php endwhile; ?>
-	</div>
+<main id="primary" class="site-main ta-container ta-content-area ta-reading-width">
+	<?php while ( have_posts() ) : the_post(); ?>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<header class="entry-header"><h1 class="entry-title"><?php the_title(); ?></h1></header>
+			<div class="entry-content"><?php the_content(); ?></div>
+		</article>
+	<?php endwhile; ?>
 </main>
-<?php
-get_footer();
-
+<?php get_footer(); ?>

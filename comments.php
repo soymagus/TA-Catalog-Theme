@@ -1,10 +1,5 @@
 <?php
-/**
- * Comments template.
- *
- * @package TA_Catalog_Theme
- */
-
+/** Comments template. @package TACatalog */
 if ( post_password_required() ) {
 	return;
 }
@@ -15,7 +10,7 @@ if ( post_password_required() ) {
 			<?php
 			printf(
 				/* translators: %s: number of comments. */
-				esc_html( _n( '%s comentario', '%s comentarios', get_comments_number(), 'ta-catalog-theme' ) ),
+				esc_html( _n( '%s comentario', '%s comentarios', get_comments_number(), 'ta-catalog' ) ),
 				esc_html( number_format_i18n( get_comments_number() ) )
 			);
 			?>
@@ -24,8 +19,7 @@ if ( post_password_required() ) {
 		<?php the_comments_navigation(); ?>
 	<?php endif; ?>
 	<?php if ( ! comments_open() && get_comments_number() ) : ?>
-		<p class="no-comments"><?php esc_html_e( 'Los comentarios están cerrados.', 'ta-catalog-theme' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Los comentarios están cerrados.', 'ta-catalog' ); ?></p>
 	<?php endif; ?>
 	<?php comment_form(); ?>
 </section>
-

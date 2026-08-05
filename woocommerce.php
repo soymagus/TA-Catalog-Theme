@@ -1,17 +1,12 @@
 <?php
 /**
- * WooCommerce compatibility wrapper.
+ * WooCommerce generic wrapper.
  *
- * @package TA_Catalog_Theme
+ * @package TACatalog
  */
-
 get_header();
-
-if ( function_exists( 'woocommerce_content' ) ) {
-	do_action( 'woocommerce_before_main_content' );
-	woocommerce_content();
-	do_action( 'woocommerce_after_main_content' );
-}
-
-get_footer();
-
+?>
+<main id="primary" class="site-main ta-container ta-content-area ta-woocommerce-main">
+	<?php woocommerce_content(); ?>
+</main>
+<?php get_footer(); ?>

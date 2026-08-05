@@ -2,26 +2,18 @@
 /**
  * Single post template.
  *
- * @package TA_Catalog_Theme
+ * @package TACatalog
  */
-
 get_header();
 ?>
-<main id="primary" class="site-main">
-	<div class="ta-container content-grid">
-		<section class="content-area">
-			<?php while ( have_posts() ) : ?>
-				<?php the_post(); ?>
-				<?php get_template_part( 'template-parts/content', get_post_type() ); ?>
-				<?php the_post_navigation(); ?>
-				<?php if ( comments_open() || get_comments_number() ) : ?>
-					<?php comments_template(); ?>
-				<?php endif; ?>
-			<?php endwhile; ?>
-		</section>
-		<?php get_sidebar(); ?>
-	</div>
+<main id="primary" class="site-main ta-container ta-content-area ta-reading-width">
+	<?php while ( have_posts() ) : the_post(); ?>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<header class="entry-header"><?php ta_catalog_posted_on(); ?><h1 class="entry-title"><?php the_title(); ?></h1></header>
+			<?php if ( has_post_thumbnail() ) : ?><div class="entry-thumbnail"><?php the_post_thumbnail( 'full' ); ?></div><?php endif; ?>
+			<div class="entry-content"><?php the_content(); ?></div>
+		</article>
+		<?php the_post_navigation(); ?>
+	<?php endwhile; ?>
 </main>
-<?php
-get_footer();
-
+<?php get_footer(); ?>

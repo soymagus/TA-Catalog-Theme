@@ -1,30 +1,35 @@
 <?php
 /**
- * Front-end assets.
+ * Modular assets.
  *
- * @package TA_Catalog_Theme
+ * @package TACatalog
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Enqueue public styles and scripts.
- */
 function ta_catalog_enqueue_assets() {
-	wp_enqueue_style( 'ta-catalog-style', get_stylesheet_uri(), array(), TA_CATALOG_VERSION );
-	wp_enqueue_style( 'ta-catalog-main', TA_CATALOG_URI . '/assets/css/main.css', array( 'ta-catalog-style' ), TA_CATALOG_VERSION );
+	$styles = array(
+		'ta-tokens'       => 'tokens.css',
+		'ta-base'         => 'base.css',
+		'ta-layout'       => 'layout.css',
+		'ta-header'       => 'header.css',
+		'ta-footer'       => 'footer.css',
+		'ta-components'   => 'components.css',
+		'ta-product-card' => 'product-card.css',
+		'ta-shop'         => 'shop.css',
+		'ta-woocommerce'  => 'woocommerce.css',
+		'ta-responsive'   => 'responsive.css',
+	);
 
-	if ( class_exists( 'WooCommerce' ) ) {
-		wp_enqueue_style( 'ta-catalog-woocommerce', TA_CATALOG_URI . '/assets/css/woocommerce.css', array( 'ta-catalog-main' ), TA_CATALOG_VERSION );
+	$dependency = array();
+	foreach ( $styles as $handle => $file ) {
+		wp_enqueue_style( $handle, TA_CATALOG_URI . '/assets/css/' . $file, $dependency, TA_CATALOG_VERSION );
+		$dependency = array( $handle );
 	}
 
-	wp_enqueue_script( 'ta-catalog-navigation', TA_CATALOG_URI . '/assets/js/navigation.js', array(), TA_CATALOG_VERSION, true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	wp_enqueue_script( 'ta-navigation', TA_CATALOG_URI . '/assets/js/navigation.js', array(), TA_CATALOG_VERSION, true );
+	wp_enqueue_script( 'ta-shop', TA_CATALOG_URI . '/assets/js/shop.js', array(), TA_CATALOG_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'ta_catalog_enqueue_assets' );
-

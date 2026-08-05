@@ -4,44 +4,37 @@
   "settings": {
     "appearanceTools": true,
     "layout": {
-      "contentSize": "840px",
-      "wideSize": "1240px"
+      "contentSize": "900px",
+      "wideSize": "1280px"
     },
     "color": {
-      "defaultPalette": false,
       "palette": [
-        { "slug": "ta-navy", "name": "TA Navy", "color": "#001841" },
-        { "slug": "ta-blue", "name": "TA Blue", "color": "#145da0" },
-        { "slug": "ta-sky", "name": "TA Sky", "color": "#2a9df4" },
-        { "slug": "ta-orange", "name": "TA Orange", "color": "#f28c28" },
-        { "slug": "white", "name": "Blanco", "color": "#ffffff" },
-        { "slug": "ink", "name": "Tinta", "color": "#172033" }
+        { "slug": "navy", "name": "TA Navy", "color": "#0a2042" },
+        { "slug": "blue", "name": "TA Blue", "color": "#1756a9" },
+        { "slug": "accent", "name": "TA Accent", "color": "#f59e0b" },
+        { "slug": "ink", "name": "TA Ink", "color": "#142033" },
+        { "slug": "white", "name": "White", "color": "#ffffff" }
       ]
-    },
-    "spacing": {
-      "spacingScale": { "steps": 7 },
-      "units": ["px", "rem", "em", "%", "vw"]
     },
     "typography": {
       "fluid": true,
       "fontFamilies": [
-        { "fontFamily": "Open Sans, Arial, sans-serif", "name": "Open Sans", "slug": "open-sans" }
+        {
+          "fontFamily": "Inter, ui-sans-serif, system-ui, sans-serif",
+          "name": "TA Sans",
+          "slug": "ta-sans"
+        }
       ]
     }
   },
   "styles": {
-    "color": { "background": "#f4f7fb", "text": "#172033" },
-    "spacing": { "blockGap": "1.5rem" },
-    "typography": { "fontFamily": "var(--wp--preset--font-family--open-sans)", "lineHeight": "1.65" },
-    "elements": {
-      "button": {
-        "border": { "radius": "8px" },
-        "color": { "background": "#145da0", "text": "#ffffff" },
-        "typography": { "fontWeight": "700" }
-      },
-      "heading": { "color": { "text": "#001841" }, "typography": { "lineHeight": "1.2" } },
-      "link": { "color": { "text": "#145da0" } }
+    "typography": {
+      "fontFamily": "var:preset|font-family|ta-sans",
+      "lineHeight": "1.65"
+    },
+    "color": {
+      "text": "#142033",
+      "background": "#ffffff"
     }
   }
 }
-
