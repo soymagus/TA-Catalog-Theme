@@ -1,0 +1,24 @@
+:root {
+  --ta-navy-950: #06152e;
+  --ta-navy-900: #0a2042;
+  --ta-navy-800: #12325f;
+  --ta-blue-700: #1756a9;
+  --ta-blue-600: #2470d8;
+  --ta-blue-100: #e9f2ff;
+  --ta-accent: #f59e0b;
+  --ta-accent-dark: #d97706;
+  --ta-success: #17864b;
+  --ta-danger: #c73a3a;
+  --ta-ink: #142033;
+  --ta-muted: #657187;
+  --ta-line: #dfe5ed;
+  --ta-surface: #ffffff;
+  --ta-surface-soft: #f5f7fa;
+  --ta-radius-sm: 8px;
+  --ta-radius-md: 14px;
+  --ta-radius-lg: 22px;
+  --ta-shadow-sm: 0 4px 16px rgb(9 32 66 / 8%);
+  --ta-shadow-md: 0 14px 36px rgb(9 32 66 / 14%);
+  --ta-container: 1280px;
+  --ta-transition: 180ms ease;
+}

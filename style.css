@@ -1,0 +1,17 @@
+/*
+Theme Name: TA Catalog Theme
+Theme URI: https://github.com/soymagus/TA-Catalog-Theme
+Author: Técnicos Americanos
+Author URI: https://www.tecnicosamericanos.com/
+Description: Tema profesional de catálogo para WooCommerce, optimizado para productos técnicos y navegación responsive.
+Version: 0.6.0-alpha
+Requires at least: 6.4
+Tested up to: 6.8
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ta-catalog
+Tags: e-commerce, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, wide-blocks
+*/
+
+/* Los estilos se cargan de forma modular desde /assets/css. */

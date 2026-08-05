@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#06152e"/><stop offset="1" stop-color="#1756a9"/></linearGradient></defs>
+  <rect width="1200" height="900" fill="#f5f7fa"/>
+  <rect width="1200" height="52" fill="#06152e"/>
+  <text x="600" y="33" fill="#dce9ff" font-family="Arial" font-size="16" text-anchor="middle">CATÁLOGO PROFESIONAL DE PRODUCTOS Y SOLUCIONES TÉCNICAS</text>
+  <rect y="52" width="1200" height="118" fill="#fff"/>
+  <text x="70" y="122" fill="#0a2042" font-family="Arial" font-size="38" font-weight="700">TA CATALOG</text>
+  <rect x="390" y="84" width="490" height="52" rx="26" fill="#f5f7fa" stroke="#dfe5ed"/>
+  <text x="420" y="116" fill="#657187" font-family="Arial" font-size="16">Buscar productos, categorías o SKU…</text>
+  <circle cx="850" cy="110" r="21" fill="#1756a9"/>
+  <rect y="170" width="1200" height="54" fill="#0a2042"/>
+  <text x="70" y="204" fill="#fff" font-family="Arial" font-size="16">INICIO     CATÁLOGO     CATEGORÍAS     CONTACTO</text>
+  <rect y="224" width="1200" height="210" fill="url(#g)"/>
+  <text x="70" y="287" fill="#f59e0b" font-family="Arial" font-size="15" font-weight="700">CATÁLOGO</text>
+  <text x="70" y="355" fill="#fff" font-family="Arial" font-size="58" font-weight="700">Productos técnicos</text>
+  <text x="70" y="393" fill="#c6d4e7" font-family="Arial" font-size="18">Encontrá equipos, soluciones y accesorios para cada proyecto.</text>
+  <g transform="translate(72 487)">
+    <g><rect width="320" height="350" rx="16" fill="#fff" stroke="#dfe5ed"/><rect x="18" y="18" width="284" height="188" rx="10" fill="#edf2f7"/><circle cx="160" cy="112" r="55" fill="#cbd8e8"/><rect x="18" y="229" width="88" height="10" rx="5" fill="#2470d8"/><rect x="18" y="254" width="245" height="16" rx="8" fill="#0a2042"/><rect x="18" y="284" width="130" height="20" rx="8" fill="#657187"/><rect x="18" y="320" width="134" height="16" rx="7" fill="#e9f2ff"/><rect x="168" y="320" width="134" height="16" rx="7" fill="#1756a9"/></g>
+    <g transform="translate(340)"><rect width="320" height="350" rx="16" fill="#fff" stroke="#dfe5ed"/><rect x="18" y="18" width="284" height="188" rx="10" fill="#edf2f7"/><rect x="105" y="62" width="110" height="100" rx="12" fill="#cbd8e8"/><rect x="18" y="229" width="88" height="10" rx="5" fill="#2470d8"/><rect x="18" y="254" width="245" height="16" rx="8" fill="#0a2042"/><rect x="18" y="284" width="130" height="20" rx="8" fill="#657187"/><rect x="18" y="320" width="134" height="16" rx="7" fill="#e9f2ff"/><rect x="168" y="320" width="134" height="16" rx="7" fill="#1756a9"/></g>
+    <g transform="translate(680)"><rect width="320" height="350" rx="16" fill="#fff" stroke="#dfe5ed"/><rect x="18" y="18" width="284" height="188" rx="10" fill="#edf2f7"/><path d="M105 160h110l-20-98h-70z" fill="#cbd8e8"/><rect x="18" y="229" width="88" height="10" rx="5" fill="#2470d8"/><rect x="18" y="254" width="245" height="16" rx="8" fill="#0a2042"/><rect x="18" y="284" width="130" height="20" rx="8" fill="#657187"/><rect x="18" y="320" width="134" height="16" rx="7" fill="#e9f2ff"/><rect x="168" y="320" width="134" height="16" rx="7" fill="#1756a9"/></g>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+.button, button.button, input.button, a.button { display: inline-flex; align-items: center; justify-content: center; min-height: 43px; padding: 9px 18px; border: 1px solid var(--ta-blue-700); border-radius: var(--ta-radius-sm); background: var(--ta-blue-700); color: #fff; font-size: .87rem; font-weight: 750; line-height: 1.2; transition: transform var(--ta-transition), background var(--ta-transition), border-color var(--ta-transition); }
+.button:hover, button.button:hover, input.button:hover, a.button:hover { border-color: var(--ta-navy-900); background: var(--ta-navy-900); color: #fff; transform: translateY(-1px); }
+.ta-button--secondary, a.ta-button--secondary { border-color: var(--ta-line); background: #fff; color: var(--ta-navy-900); }
+.ta-button--secondary:hover, a.ta-button--secondary:hover { border-color: var(--ta-blue-700); background: var(--ta-blue-100); color: var(--ta-blue-700); }
+.pagination, .woocommerce-pagination { margin-top: 45px; }
+.pagination .nav-links, .woocommerce-pagination ul.page-numbers { display: flex; justify-content: center; gap: 7px; border: 0 !important; }
+.page-numbers a, .page-numbers span { display: grid; place-items: center; min-width: 42px; height: 42px; padding: 0 10px; border: 1px solid var(--ta-line) !important; border-radius: var(--ta-radius-sm); background: #fff; }
+.page-numbers .current { border-color: var(--ta-blue-700) !important; background: var(--ta-blue-700); color: #fff; }

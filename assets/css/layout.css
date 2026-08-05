@@ -1,0 +1,27 @@
+.ta-container { width: min(calc(100% - 40px), var(--ta-container)); margin-inline: auto; }
+.site-main { min-height: 45vh; }
+.ta-content-area { padding-block: clamp(42px, 6vw, 84px); }
+.ta-reading-width { max-width: 900px; }
+.entry-header { margin-bottom: 32px; }
+.entry-title, .page-header h1 { font-size: clamp(2rem, 4vw, 3.5rem); }
+.entry-content > * { max-width: 100%; }
+.entry-content img, .entry-thumbnail img { border-radius: var(--ta-radius-md); }
+.entry-thumbnail { margin-bottom: 36px; }
+.ta-post-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.content-grid { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: clamp(28px, 5vw, 64px); }
+.content-area { min-width: 0; }
+.widget-area { align-self: start; }
+.site-main--front .entry-content { width: 100%; }
+.entry-card { margin-bottom: 28px; padding: clamp(22px, 4vw, 36px); border: 1px solid var(--ta-line); border-radius: var(--ta-radius-md); background: #fff; box-shadow: var(--ta-shadow-sm); }
+.entry-card__image { display: block; margin: calc(clamp(22px, 4vw, 36px) * -1) calc(clamp(22px, 4vw, 36px) * -1) 26px; overflow: hidden; border-radius: var(--ta-radius-md) var(--ta-radius-md) 0 0; }
+.entry-card__image img { width: 100%; max-height: 420px; object-fit: cover; }
+.entry-meta, .entry-footer { color: var(--ta-muted); font-size: .85rem; }
+.entry-footer { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 20px; }
+.comments-area { margin-top: 48px; }
+.ta-post-card { overflow: hidden; border: 1px solid var(--ta-line); border-radius: var(--ta-radius-md); background: #fff; box-shadow: var(--ta-shadow-sm); }
+.ta-post-card__body { padding: 24px; }
+.ta-post-card h2 { font-size: 1.35rem; }
+.posted-on { display: block; margin-bottom: 8px; color: var(--ta-muted); font-size: .82rem; }
+.ta-empty-state { max-width: 720px; text-align: center; }
+.ta-empty-state__code { display: block; color: var(--ta-blue-100); font-size: clamp(6rem, 18vw, 12rem); font-weight: 900; line-height: .8; }
+.ta-empty-state .ta-search-form { margin: 28px auto; }

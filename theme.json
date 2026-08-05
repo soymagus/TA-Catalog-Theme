@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "900px",
+      "wideSize": "1280px"
+    },
+    "color": {
+      "palette": [
+        { "slug": "navy", "name": "TA Navy", "color": "#0a2042" },
+        { "slug": "blue", "name": "TA Blue", "color": "#1756a9" },
+        { "slug": "accent", "name": "TA Accent", "color": "#f59e0b" },
+        { "slug": "ink", "name": "TA Ink", "color": "#142033" },
+        { "slug": "white", "name": "White", "color": "#ffffff" }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "fontFamily": "Inter, ui-sans-serif, system-ui, sans-serif",
+          "name": "TA Sans",
+          "slug": "ta-sans"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "typography": {
+      "fontFamily": "var:preset|font-family|ta-sans",
+      "lineHeight": "1.65"
+    },
+    "color": {
+      "text": "#142033",
+      "background": "#ffffff"
+    }
+  }
+}
