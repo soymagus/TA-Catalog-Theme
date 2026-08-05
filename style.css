@@ -1,0 +1,18 @@
+/*
+Theme Name: TA Catalog Theme
+Theme URI: https://www.tecnicosamericanos.com/
+Author: Técnicos Americanos
+Author URI: https://www.tecnicosamericanos.com/
+Description: Tema de catálogo profesional para WordPress y WooCommerce, preparado para productos, servicios y proveedores técnicos.
+Version: 0.1.0
+Requires at least: 6.6
+Tested up to: 6.8
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ta-catalog-theme
+Tags: e-commerce, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, wide-blocks
+*/
+
+/* Los estilos principales se cargan desde assets/css/main.css. */
+

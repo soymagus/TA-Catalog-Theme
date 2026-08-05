@@ -1,0 +1,5 @@
+body { color: #172033; font-family: "Open Sans", Arial, sans-serif; line-height: 1.65; }
+.editor-styles-wrapper { padding-inline: 1rem; }
+.wp-block { max-width: 840px; }
+.wp-block[data-align="wide"] { max-width: 1240px; }
+
